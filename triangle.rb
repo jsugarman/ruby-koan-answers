@@ -14,7 +14,24 @@
 #   about_triangle_project_2.rb
 #
 def triangle(a, b, c)
-  # WRITE THIS CODE
+  sides = [a,b,c]
+  occurence = Hash.new(0)
+  
+  # count the occurence of each number and store in hash
+  sides.each do |i|
+   occurence[i]+=1
+  end
+
+  case occurence.values.max
+    when 1
+      :scalene
+    when 2 
+      :isosceles
+    when 3 
+      :equilateral
+    else
+      :not_a_triangle
+  end
 end
 
 # Error class used in part 2.  No need to change this code.
