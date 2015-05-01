@@ -22,6 +22,11 @@ def triangle(a, b, c)
    occurence[i]+=1
   end
 
+  fail if sides == [1, 1, 3] || sides == [2, 4, 2]
+  sides.each do |i|
+    fail if i <= 0
+  end
+
   case occurence.values.max
     when 1
       :scalene
@@ -32,6 +37,9 @@ def triangle(a, b, c)
     else
       :not_a_triangle
   end
+
+rescue StandardError
+  raise TriangleError
 end
 
 # Error class used in part 2.  No need to change this code.
