@@ -78,7 +78,7 @@ class AboutScope < Neo::Koan
 
   def test_you_can_get_a_list_of_constants_for_any_class_or_module
     # puts Object.constants.size
-    puts Jims.constants
+    # puts Jims.constants
     assert_equal [:Dog], Jims.constants
     assert Object.constants.size > 149
   end
