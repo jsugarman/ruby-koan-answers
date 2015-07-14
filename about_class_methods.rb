@@ -169,6 +169,10 @@ class AboutClassMethods < Neo::Koan
   #
   # Which do you prefer and why?
   # Are there times you might prefer one over the other?
+  # NOTE SURE: but from an orgnaisatioal point of view it
+  # is neater to group all your class (self) methods together
+  # and from a DRY point of view it means not repeating self
+  # or class name
 
   # ------------------------------------------------------------------
 
